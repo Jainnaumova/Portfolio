@@ -11,7 +11,7 @@ body {
   color: setTextColor($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Condensed', Helvetica, sans-serif;
   line-height: 1.5;
 }
 
@@ -20,7 +20,7 @@ h1, h2, h3 {
   font-weight: 400;
 
   &.author-name {
-    font-size: 6rem;
+    font-size: 2.5rem;
   }
 
   &.author-description {
@@ -49,27 +49,33 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 60px); // freeze footer
 
-  .icons {
-    margin-top: 1rem;
-
-    a {
-      padding: 0.4rem;
-
-      &:hover {
-        color: $secondary-color;
-        @include easeOut;
-      }
-    }
-  }
 
   &#home {
     overflow: hidden;
     h1 {
       margin-top: 20vh;
+      font-size: 6rem;
+      font-family: 'Bad Script', Helvetica, cursive;
     }
   }
 }
 
+.icons {
+  display: flex;
+  width: 50hv;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  a {
+    padding: 0.4rem;
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
 // about.html
 .about-info {
   display: grid;
@@ -93,6 +99,13 @@ main {
     font-size: 1rem;
   }
 
+  .text-description {
+    background: darken($primary-color, 7);
+    border-radius: 5px;
+    padding: 10px 10px 10px 30px;
+    box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,.2), 0 0 1rem rgba(0,0,0,.2);
+  }
+
   .job-1 {
     grid-area: job1;
   }
@@ -106,17 +119,58 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: darken($primary-color, 7);
     padding: 0.5rem;
     font-size: 0.8rem;
     border-bottom: $secondary-color 5px solid;
+    box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,.2), 0 0 1rem rgba(0,0,0,.2);
   }
+}
+
+// projects.html
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  .item {
+    background: darken($primary-color, 7);
+    padding: 1.5rem;
+    border-bottom: $secondary-color 5px solid;
+    box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,.2), 0 0 1rem rgba(0,0,0,.2);
+  }
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+
+  .item-tech-name{
+    font-weight: 700;
+  }
+
+  .item-tech-desc {
+    font-size: 0.8rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
 }
 
 #footer {
   text-align: center;
-  background: darken($primary-color, 10);
-  color: setTextColor($primary-color);
+  background: #2a2a32;
+  color: $primary-color;
   height: 60px;
 }
 
