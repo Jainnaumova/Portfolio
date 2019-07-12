@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'responsive';
 
 * {
   box-sizing: border-box;
@@ -9,7 +8,7 @@
 body {
   @include background;
   background: $primary-color;
-  color: #fff;
+  color: setTextColor($primary-color);
   height: 100%;
   margin: 0;
   font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
@@ -48,7 +47,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px); // freeze footer
 
   .icons {
     margin-top: 1rem;
@@ -70,3 +69,55 @@ main {
     }
   }
 }
+
+// about.html
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+  'aboutimage desc desc'
+  'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .about-image {
+    grid-area: aboutimage;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .about-description {
+    grid-area: desc;
+    font-size: 1rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+#footer {
+  text-align: center;
+  background: darken($primary-color, 10);
+  color: setTextColor($primary-color);
+  height: 60px;
+}
+
+@import 'responsive'; // run responsive after the initial css

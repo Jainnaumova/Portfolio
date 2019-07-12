@@ -28,7 +28,17 @@ $background-opacity: 0.95;
   }
 }
 
-// Media Query mixin
+// Set Text color automatically changeble
+@function setTextColor($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+
+// Media Query mixins
 @mixin mediaMobile {
   @media screen and (max-width: 500px) {
     @content;
