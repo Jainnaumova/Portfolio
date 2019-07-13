@@ -150,7 +150,7 @@ main {
 
 .icons {
   display: flex;
-  width: 50hv;
+  width: 100vw;
   justify-content: center;
   align-items: center;
   margin-top: 1rem; }
