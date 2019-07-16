@@ -15,9 +15,9 @@
     align-items: center;
     text-align: center;
 
-    .author-name {
-      line-height: 1;
-      margin-bottom: 1rem;
+    &#home h1 {
+      margin-top: 5vh;
+      font-size: 3rem;
     }
   }
 
@@ -67,6 +67,7 @@
 @include mediaMobile {
   main #home h1 {
     margin-top: 10vh;
+
   }
 
   .projects {
