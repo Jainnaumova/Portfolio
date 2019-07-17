@@ -22,6 +22,7 @@ h1, h2, h3 {
 
   &.author-name {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   &.author-description {
@@ -59,6 +60,10 @@ main {
       font-family: 'Bad Script', Helvetica, cursive;
     }
   }
+}
+
+span {
+  color: #333;
 }
 
 .icons {
@@ -105,6 +110,12 @@ main {
     border-radius: 5px;
     padding: 10px 10px 10px 30px;
     box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,.2), 0 0 1rem rgba(0,0,0,.2);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    div {
+      margin-bottom: 1rem;
+    }
   }
 
   .job-1 {
@@ -155,6 +166,11 @@ main {
     display: flex;
     justify-content: space-around;
     margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .item-name {
+    font-weight: bold;
   }
 
   .item-tech-name{
@@ -182,6 +198,47 @@ main {
   background: #2a2a32;
   color: $primary-color;
   height: 60px;
+}
+
+// contact.html
+
+.contact-info {
+  display: flex;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  margin-left: -1.1rem;
+}
+
+.pic-background {
+  width: 50%;
+  height: 50%;
+}
+
+.pic-style {
+  width: 250px;
+  height: 250px;
+  background: url('../img/portrait.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: solid 3px $secondary-color;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+.contact-desc:hover {
+  color: $secondary-color;
+  @include easeOut;
 }
 
 @import 'responsive'; // run responsive after the initial css

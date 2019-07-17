@@ -73,7 +73,7 @@
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 300;
+    font-weight: bold;
     color: #000;
     text-decoration: none;
     transition: all 0.3s ease-out; }
@@ -121,7 +121,8 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400; }
   h1.author-name, h2.author-name, h3.author-name {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    margin-bottom: 1rem; }
   h1.author-description, h2.author-description, h3.author-description {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -148,6 +149,9 @@ main {
       margin-top: 20vh;
       font-size: 6rem;
       font-family: 'Bad Script', Helvetica, cursive; }
+
+span {
+  color: #333; }
 
 .icons {
   display: flex;
@@ -180,7 +184,11 @@ main {
     background: #ededed;
     border-radius: 5px;
     padding: 10px 10px 10px 30px;
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .about-info .text-description div {
+      margin-bottom: 1rem; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -212,7 +220,10 @@ main {
   .projects .item-group {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    color: #333; }
+  .projects .item-name {
+    font-weight: bold; }
   .projects .item-tech-name {
     font-weight: 700;
     margin: 0 1.5rem;
@@ -233,6 +244,38 @@ main {
   background: #2a2a32;
   color: #fff;
   height: 60px; }
+
+.contact-info {
+  display: flex; }
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  margin-left: -1.1rem; }
+
+.pic-background {
+  width: 50%;
+  height: 50%; }
+
+.pic-style {
+  width: 250px;
+  height: 250px;
+  background: url("../img/portrait.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: solid 3px #eeca1a; }
+
+.contact-item {
+  margin-bottom: 1.5rem; }
+
+.icon {
+  margin-right: 1rem;
+  width: 2rem; }
+
+.contact-desc:hover {
+  color: #eeca1a;
+  transition: all 0.3s ease-out; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -276,5 +319,15 @@ main {
 @media screen and (max-width: 500px) {
   main #home h1 {
     margin-top: 10vh; }
+  a span {
+    font-size: 0.8rem; }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -5rem; }
+  .contact-item {
+    display: flex;
+    flex-direction: column; }
   .projects {
     grid-template-columns: 1fr; } }
